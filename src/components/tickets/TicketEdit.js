@@ -4,7 +4,8 @@ import { useNavigate, useParams } from "react-router-dom"
 export const TicketEdit = () => {
     const [ticket, assignTicket] = useState({
         description: "",
-        emergency: false
+        dateCompleted: 0,
+        service: ""
     })
     const { ticketId } = useParams()
     const navigate = useNavigate()
@@ -54,20 +55,6 @@ export const TicketEdit = () => {
                             assignTicket(copy)
                         }
                     }>{ticket.description}</textarea>
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="name">Emergency:</label>
-                <input type="checkbox"
-                    checked={ticket.emergency}
-                    onChange={
-                        (evt) => {
-                            const copy = { ...ticket }
-                            copy.emergency = evt.target.checked
-                            assignTicket(copy)
-                        }
-                    } />
             </div>
         </fieldset>
         <button

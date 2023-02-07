@@ -7,7 +7,7 @@ export const TicketList = ({ searchTermState }) => {
     const [tickets, setTickets] = useState([])
     const [employees, setEmployees] = useState([])
     const [filteredTickets, setFiltered] = useState([])
-    const [emergency, setEmergency] = useState(false)
+    const [services, setServices] = useState([])
     const [openOnly, updateOpenOnly] = useState(false)
     const navigate = useNavigate()
 
@@ -24,18 +24,7 @@ export const TicketList = ({ searchTermState }) => {
         [searchTermState]
     )
 
-    useEffect(
-        () => {
-            if (emergency) {
-                const emergencyTickets = tickets.filter(ticket => ticket.emergency === true)
-                setFiltered(emergencyTickets)
-            }
-            else {
-                setFiltered(tickets)
-            }
-        },
-        [emergency]
-    )
+
 
     const getAllTickets = () => {
         fetch(`http://localhost:8088/serviceTickets?_embed=employeeTickets`)
@@ -95,19 +84,13 @@ export const TicketList = ({ searchTermState }) => {
     return <>
         {
             mercuryUserObject.staff
-                ? <button onClick={() => { setEmergency(true) }}>Emergency Only</button>
-                : ""
-                    ? <>
-
-                        <button onClick={() => setEmergency(true)} >Emergency Only</button>
-                        <button onClick={() => setEmergency(false)} >Show All</button>
-                    </>
-                    : <>
-                        <button onClick={() => navigate("/ticket/create")}>Create Ticket</button>
-                        <button onClick={() => updateOpenOnly(true)} >Open Ticket</button>
-                        <button onClick={() => updateOpenOnly(false)} >All My Tickets</button>
-                    </>
         }
+        : <>
+            <button onClick={() => navigate("/ticket/create")}>Book Here</button>
+            <button onClick={() => updateOpenOnly(true)} >Open Booking</button>
+            <button onClick={() => updateOpenOnly(false)} >All Bookings</button>
+        </>
+        
         <h2>List of Tickets</h2>
         <article className="tickets">
             {

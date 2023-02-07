@@ -6,10 +6,14 @@ export const TicketForm = () => {
         TODO: Add the correct default properties to the
         initial state object
     */
+    const [astrology, setAstrology] = useState(false)
+    const [tarot, setTarot] = useState(false)
+    const [iChing, setIChing] = useState(false)
     const [ticket, update] = useState({
         description: "",
-        emergency: false
+        service: ""
     })
+
     const navigate = useNavigate()
     /*
         TODO: Use the useNavigation() hook so you can redirect
@@ -28,7 +32,7 @@ export const TicketForm = () => {
         const ticketToSendToAPI = {
             userId: mercuryUserObject.id,
             description: ticket.description,
-            emergency: ticket.emergency,
+            service: ticket.service,
             dateCompleted: ""
         }
         return fetch(`http://localhost:8088/serviceTickets`, {
@@ -50,15 +54,15 @@ export const TicketForm = () => {
 
     return (
         <form className="ticketForm">
-            <h2 className="ticketForm__title">New Service Ticket</h2>
+            <h2 className="ticketForm__title">Booking Information</h2>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="description">Description:</label>
+                    <label htmlFor="description">Familiarity:</label>
                     <input
                         required autoFocus
                         type="text"
                         className="form-control"
-                        placeholder="Brief description of problem"
+                        placeholder="What familiarity (if any) do you have with Astrology, Tarot, or I Ching?"
                         value={ticket.description}
                         onChange={
                             (evt) => {
@@ -71,18 +75,84 @@ export const TicketForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="name">Emergency:</label>
-                    <input type="checkbox"
-                        value={ticket.emergency}
+                    <label htmlFor="booking date">Desired Booking Date:</label>
+                    <input
+                        required autoFocus
+                        type="date"
+                        className="form-control"
+                        placeholder="Include Time Zone"
+                        value={ticket.date}
                         onChange={
                             (evt) => {
                                 const copy = { ...ticket }
-                                copy.emergency = evt.target.checked
+                                copy.date = evt.target.value
                                 update(copy)
                             }
                         } />
                 </div>
             </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="booking date">Desired Booking Time:</label>
+                    <input
+                        required autoFocus
+                        type="time"
+                        className="form-control"
+                        placeholder="Include Time Zone"
+                        value={ticket.time}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...ticket }
+                                copy.date = evt.target.value
+                                update(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="name">Astrology:</label>
+                    <input type="checkbox"
+                        value={ticket.astrology}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...ticket }
+                                copy.service = evt.target.checked
+                                update(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="name">Tarot:</label>
+                    <input type="checkbox"
+                        value={ticket.service}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...ticket }
+                                copy.service = evt.target.checked
+                                update(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="name">I Ching:</label>
+                    <input type="checkbox"
+                        value={ticket.service}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...ticket }
+                                copy.service = evt.target.checked
+                                update(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+          
+
             <button
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
                 className="btn btn-primary">
