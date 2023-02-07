@@ -39,7 +39,7 @@ export const Ticket = ({ ticketObject, currentUser, employees, getAllTickets }) 
         const copy = {
             userId: ticketObject.userId,
             description: ticketObject.description,
-            emergency: ticketObject.emergency,
+           
             dateCompleted: new Date()
         }
 
@@ -87,7 +87,7 @@ export const Ticket = ({ ticketObject, currentUser, employees, getAllTickets }) 
             }
         </header>
         <section>{ticketObject.description}</section>
-        <section>Emergency: {ticketObject.emergency ? "bomb" : "No"}</section>
+        
         <footer>
             {
                 ticketObject.employeeTickets.length

@@ -1,32 +1,103 @@
 .tickets {
-    display: flex;
-    flex-direction: column;
+   
+    /* flex-direction: column; */
+   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ticket {
-    background-color: rgb(214, 184, 241);
+    /* background-color: rgb(214, 184, 241);
     border: ipx dotted darkmagenta;
     padding: 0.7rem;
-    margin: 0.5rem 0;
+    margin: 0.5rem 0; */
+    background-color: #fff;
+  color: #000;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  margin-top: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .ticket__delete {
-    margin-left: auto;
-    background-color: lightcoral;
+
+    /* margin-left: auto;
+    background-color: lightcoral; */
+    background-color: #fff;
+  color: #000;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  margin-top: 20px;
+  text-shadow: 1px 1px 7px rgba(46, 0, 252, 0.971);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .ticket__finish {
-    margin-left: auto;
+    /* margin-left: auto; */
+   
+    background-color: #fff;
+  color: #000;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  margin-top: 20px;
+  text-shadow: 1px 1px 7px rgba(46, 0, 252, 0.971);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .ticket__footer {
-    display: flex;
+    /* display: flex;
     padding: 1rem 0 0 0;
     border-top: 1px dashed darkmagenta;
-    margin: 1rem 0 0 0;
+    margin: 1rem 0 0 0; */
+    display: flex;
+    
+    background-color: #fff;
+  color: #000;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  margin-top: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 7px rgba(46, 0, 252, 0.971);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+   
 }
 
 .ticket__header {
-    font-size: large;
-    padding: 0 0 1rem 0;
+    /* font-size: large;
+    padding: 0 0 1rem 0; */
+   
+    background-color: #fff;
+  color: #000;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  margin-top: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 7px rgba(46, 0, 252, 0.971);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+   
+}
+
+h1, h2, h3, .label, .div, .form-group {
+    background-color: #fdfcfd;
+    display: flex;
+    align-items: center;
+    text-shadow: 1px 1px 7px rgba(46, 0, 252, 0.971);
+    justify-content: center;
+    height: 10vh;
 }

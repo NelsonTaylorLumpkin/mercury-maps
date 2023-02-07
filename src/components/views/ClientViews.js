@@ -10,7 +10,7 @@ export const ClientViews = () => {
             <Route path="/" element={
                 <>
                     <h1>Mercury Maps</h1>
-                    <div>Past, Present, and Future</div>
+                    <h3>Professional Hellenistic Astrologer, Tarot Reader, and Geomancer</h3>
 
                     <Outlet />
                 </>
