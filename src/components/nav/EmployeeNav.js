@@ -5,23 +5,28 @@ export const EmployeeNav = () => {
     const navigate = useNavigate()
 
     return (
+    
         <ul className="navbar">
-            <li className="navbar__item active">
-                <Link className="navbar__link" to="/tickets">Tickets</Link>
-            </li>
-            <li className="navbar__item active">
+            <div className="navbar__item active">
+                <Link className="navbar__link" to="/tickets">Booking</Link>
+            </div>
+            <div className="navbar__item active">
                 <Link className="navbar__link" to="/employees">Employees</Link>
-            </li>
-            <li className="navbar__item navbar__logout">
+            </div>
+            {/* <div className="navbar__item navbar__logout">
                 <Link className="navbar__link" to="/profile">About Me</Link>
-            </li>
-            <li className="navbar__item navbar__logout">
+            </div> */}
+             <div className="navbar__item navbar__logout">
+                <Link className="navbar__link" to="/about">About Me</Link>
+            </div>
+            <div className="navbar__item navbar__logout">
                 <Link className="navbar__link" to="" onClick={() => {
                     localStorage.removeItem("mercury_user")
                     navigate("/", { replace: true })
                 }}>Logout</Link>
-            </li>
+            </div>
         </ul>
+    
     )
 }
 

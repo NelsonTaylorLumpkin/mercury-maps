@@ -1,5 +1,6 @@
 import { EmployeeForm } from "./EmployeeForm"
 import { ClientForm } from "./ClientForm"
+import React from "react"
 
 export const Profile = () => {
 
@@ -12,5 +13,8 @@ export const Profile = () => {
     }
     else {
         return <ClientForm/>
+        
     }
+    
 }
+

@@ -7,7 +7,7 @@ export const TicketList = ({ searchTermState }) => {
     const [tickets, setTickets] = useState([])
     const [employees, setEmployees] = useState([])
     const [filteredTickets, setFiltered] = useState([])
-    const [services, setServices] = useState([])
+    // const [services, setServices] = useState([])
     const [openOnly, updateOpenOnly] = useState(false)
     const navigate = useNavigate()
 
@@ -38,7 +38,7 @@ export const TicketList = ({ searchTermState }) => {
     useEffect(
         () => {
             getAllTickets()
-            fetch(`http://localhost:8088/employees?_expand=user`)
+            fetch(`http://localhost:8088/employees?_expand=userId`)
                 .then(response => response.json())
                 .then((employeeArray) => {
                     setEmployees(employeeArray)
@@ -82,10 +82,10 @@ export const TicketList = ({ searchTermState }) => {
     )
 
     return <>
-        {
+        {/* {
             mercuryUserObject.staff
-        }
-        : <>
+        } */}
+         <>
             <button onClick={() => navigate("/ticket/create")}>Book Here</button>
             <button onClick={() => updateOpenOnly(true)} >Open Booking</button>
             <button onClick={() => updateOpenOnly(false)} >All Bookings</button>
@@ -98,7 +98,8 @@ export const TicketList = ({ searchTermState }) => {
                     (ticket) => <Ticket employees={employees}
                         getAllTickets={getAllTickets}
                         currentUser={mercuryUserObject}
-                        ticketObject={ticket} />
+                        ticketObject={ticket}
+                        key={ticket.id} />
                 )
             }
 
