@@ -1,30 +1,69 @@
 .h1, h1 {
     font-size: 2.5rem;
-    background-color: #ffffff;
+    /* background-color:  rgb(250, 249, 171); */
   display: flex;
   align-items: center;
   justify-content: center;
   height: 10vh;
+  
 }
+
+h2 {
+   
+    border-radius: 100px;
+    box-shadow: 1px 6px 200px 6px rgba(101, 86, 235, 0.826);
+}
+
+ /* .container--login {
+  
+    background-image: url('file:///Users/nelsonlumpkin/Downloads/zodiac-5593791%20(2).svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  
+}  */
+
+
 
 fieldset {
     min-width: 0;
-    padding: 1rem 0;
+    padding: 0;
     margin: 0;
     border: 0;
-   
+    box-shadow: 1px 10px 100px px rgba(101, 86, 235, 0.826);
+    text-shadow: 1px 2px 25px 25px rgba(46, 0, 252, 0.971);
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+
+    
 }
 
 .form--login {
     /* display: inline-block; */
     margin: 0 auto;
     text-align: center;
+    /* box-shadow: 1px 6px 200px 6px rgba(101, 86, 235, 0.826); */
+    
+  
+  
+    
     
     
 }
 
 .form--login > fieldset > input[type="email"] {
-    width: 25em;
+    width: 45em;
+    border-radius: 100px;
+    box-shadow: 1px 6px 200px 6px rgba(101, 86, 235, 0.826);
+    
     
     
 }
@@ -32,6 +71,8 @@ fieldset {
 .label--login {
     width: 8rem;
     display: inline-block;
+    border-radius: 100px;
+    /* box-shadow: 1px 6px 200px 6px rgba(101, 86, 235, 0.826); */
     
     
     
@@ -50,12 +91,14 @@ fieldset {
     font-weight: 400;
     line-height: 1.5;
     color: #495057;
-    background-color: rgb(255, 255, 255);
+    background-color:  rgb(250, 249, 171);
     background-clip: padding-box;
     border: 1px solid #ced4da;
-    border-radius: .25rem;
+    border-radius: 100px;
     -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    
+   
 }
 
 .container--login {
@@ -65,10 +108,12 @@ fieldset {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  padding: 20px;
+  /* background-color:  rgb(250, 249, 171); */
+  border-radius: 100px;
+  /* box-shadow: 1px 6px 200px 6px rgba(101, 86, 235, 0.826); */
+  /* padding: 20px; */
+  /* box-shadow: 1px 10px 100px px rgba(101, 86, 235, 0.826); */
+  box-shadow: 1px 6px 200px 6px rgba(101, 86, 235, 0.826);
 }
 
 .form--login {
@@ -79,11 +124,37 @@ fieldset {
     background-color: hsla(0,0%,100%,0.40);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
+    border-radius: 100px;
+   
+    
+
     
 }
+
+main {
+    background-image: url('file:///Users/nelsonlumpkin/Downloads/zodiac-4367961.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 200vh;
+    
+  }
 
 .button--close {
     position: relative;
     bottom: -2rem;
 }
 
+a {
+color:rgb(0, 0, 0);
+background-color:  rgb(250, 249, 171);
+border-radius: 100px;
+
+}

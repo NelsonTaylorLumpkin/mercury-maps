@@ -11,7 +11,12 @@ export const TicketForm = () => {
     const [iChing, setIChing] = useState(false)
     const [ticket, update] = useState({
         description: "",
-        service: ""
+        service: "",
+        date: "",
+        time: "",
+        astrology: "",
+        tarot: "",
+        iChing: ""
     })
 
     const navigate = useNavigate()
@@ -33,6 +38,11 @@ export const TicketForm = () => {
             userId: mercuryUserObject.id,
             description: ticket.description,
             service: ticket.service,
+            date: ticket.date,
+            time: ticket.time,
+            astrology: ticket.astrology,
+            tarot: ticket.tarot,
+            iChing: ticket.iChing,
             dateCompleted: ""
         }
         return fetch(`http://localhost:8088/serviceTickets`, {
@@ -103,7 +113,7 @@ export const TicketForm = () => {
                         onChange={
                             (evt) => {
                                 const copy = { ...ticket }
-                                copy.date = evt.target.value
+                                copy.time = evt.target.value
                                 update(copy)
                             }
                         } />
@@ -117,7 +127,7 @@ export const TicketForm = () => {
                         onChange={
                             (evt) => {
                                 const copy = { ...ticket }
-                                copy.service = evt.target.checked
+                                copy.astrology = evt.target.checked
                                 update(copy)
                             }
                         } />
@@ -127,11 +137,11 @@ export const TicketForm = () => {
                 <div className="form-group">
                     <label htmlFor="name">Tarot:</label>
                     <input type="checkbox"
-                        value={ticket.service}
+                        value={ticket.tarot}
                         onChange={
                             (evt) => {
                                 const copy = { ...ticket }
-                                copy.service = evt.target.checked
+                                copy.tarot = evt.target.checked
                                 update(copy)
                             }
                         } />
@@ -141,11 +151,11 @@ export const TicketForm = () => {
                 <div className="form-group">
                     <label htmlFor="name">I Ching:</label>
                     <input type="checkbox"
-                        value={ticket.service}
+                        value={ticket.iChing}
                         onChange={
                             (evt) => {
                                 const copy = { ...ticket }
-                                copy.service = evt.target.checked
+                                copy.iChing = evt.target.checked
                                 update(copy)
                             }
                         } />

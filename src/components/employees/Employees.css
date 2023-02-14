@@ -6,13 +6,16 @@
 }
 
 .employee {
-    /* background-color: hotpink;
-    border: 2px dotted fuchsia;
-    color: black;
-    padding: 0.5rem;
-    margin: 0.5rem; */
-    color: #fff;
+  
+    /* color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-family: "Comic Sans MS", sans-serif;
-    letter-spacing: 3px;
+    letter-spacing: 3px; */
+   
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        color: rgb(238, 238, 238);
+        text-shadow: 2px 2px 4px rgba(251, 250, 250, 0.5);
 }

@@ -17,7 +17,7 @@ export const ClientList = () => {
     )
     return <article className="clients">
         {
-            Clients.map(client => <Client id={client.id} fullName={client.fullName} email={client.email}/>)
+            Clients.map(client => <Client key={client.id} id={client.id} fullName={client.fullName} email={client.email}/>)
                 
            
         }

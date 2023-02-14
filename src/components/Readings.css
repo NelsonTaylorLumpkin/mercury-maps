@@ -1,42 +1,78 @@
-/* @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One"); */
 @import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
-/*Typography
---------------------------------------------------------------*/
-/* body,
-button,
-input,
-select,
-textarea {
-  color: #404040;
-  font-family: "Comfortaa", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
- 
-} */
 
-body {
-    
-    /* padding: 0 3rem; */
+
+/* body {
+  
+    background-image: url('file:///Users/nelsonlumpkin/Downloads/zodiac-4367961.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+    display: flex;
+    flex-wrap: wrap;
     background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh; 
+
+  }
+     */
+body {
+
+  background-image: url('file:///Users/nelsonlumpkin/Downloads/zodiac-5593791%20(2).svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
+
 }
 
-h1, h2, h3, h4, h5, h6, p, div, button {
-  /* font-family: "Patua One", serif;
-  letter-spacing: 2px; */
-  color: #fff;
-  text-shadow: 1px 1px 7px rgba(46, 0, 252, 0.971);
-  
-  /* font-family: "Comic Sans MS", sans-serif; */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+button,
+link,
+form {
+
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 25px 30px rgba(46, 0, 252, 0.971);
+  /* box-shadow: 1px 6px 75px 6px rgba(101, 86, 235, 0.826); */
+  border-radius: 125px;
   font-family: 'Uncial Antiqua', sans-serif;
   letter-spacing: 3px;
   
-  
+
 }
 
+h1, h2 {
+
+  text-shadow: 200px 200px 200px 200px rgba(46, 0, 252, 0.971);
+  border-radius: 100px;
+
+  box-shadow: 1px 6px 25px 6px rgba(101, 86, 235, 0.826);
+
+}
+
+
+
+h3, h4 {
+  text-shadow: px 200px 200px 200px rgba(46, 0, 252, 0.971);
+  border-radius: 100px;
+
+  box-shadow: 1px 6px 75px 6px rgba(101, 86, 235, 0.826);
+}
 
 /* p {
   margin-bottom: 1.5em;
@@ -46,3 +82,32 @@ h1, h2, h3, h4, h5, h6, p, div, button {
   margin-block-end: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+/* ul, */
+a,
+/* .navbar__item, */
+.form-control {
+  border: solid 2px rgb(7, 8, 10);
+}
+
+h4 {
+  display: flex;
+  background-color: rgb(237, 237, 176);
+  padding: 10px 10px;
+  justify-content: center;
+} 
+
+label {
+  background-color: #ffffff;
+  border-radius: 100px;
+  border: solid 2px;
+  padding: 0px 6px;
+  box-shadow: rgb(158, 110, 222) 1px 5px 15px 5px;
+  text-shadow: 20px 20px 20px 20px rgba(46, 0, 252, 0.971);
+}

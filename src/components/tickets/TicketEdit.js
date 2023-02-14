@@ -5,7 +5,9 @@ export const TicketEdit = () => {
     const [ticket, assignTicket] = useState({
         description: "",
         dateCompleted: 0,
-        service: ""
+        service: "",
+        time: "",
+        date: ""
     })
     const { ticketId } = useParams()
     const navigate = useNavigate()
@@ -55,6 +57,42 @@ export const TicketEdit = () => {
                             assignTicket(copy)
                         }
                     }>{ticket.description}</textarea>
+            </div>
+            <div className="form-group">
+                <label htmlFor="time">Time:</label>
+                <textarea
+                    required autoFocus
+                    type="text"
+                    style={{
+                        height: "10rem"
+                    }}
+                    className="form-control"
+                    value={ticket.time}
+                    onChange={
+                        (evt) => {
+                            const copy = { ...ticket }
+                            copy.time = evt.target.value
+                            assignTicket(copy)
+                        }
+                    }>{ticket.time}</textarea>
+            </div>
+            <div className="form-group">
+                <label htmlFor="time">Date:</label>
+                <textarea
+                    required autoFocus
+                    type="text"
+                    style={{
+                        height: "10rem"
+                    }}
+                    className="form-control"
+                    value={ticket.date}
+                    onChange={
+                        (evt) => {
+                            const copy = { ...ticket }
+                            copy.date = evt.target.value
+                            assignTicket(copy)
+                        }
+                    }>{ticket.date}</textarea>
             </div>
         </fieldset>
         <button

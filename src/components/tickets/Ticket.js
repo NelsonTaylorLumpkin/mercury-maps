@@ -39,7 +39,7 @@ export const Ticket = ({ ticketObject, currentUser, employees, getAllTickets }) 
         const copy = {
             userId: ticketObject.userId,
             description: ticketObject.description,
-           
+
             dateCompleted: new Date()
         }
 
@@ -87,7 +87,7 @@ export const Ticket = ({ ticketObject, currentUser, employees, getAllTickets }) 
             }
         </header>
         <section>{ticketObject.description}</section>
-        
+
         <footer>
             {
                 ticketObject.employeeTickets.length
@@ -103,6 +103,7 @@ export const Ticket = ({ ticketObject, currentUser, employees, getAllTickets }) 
             }
         </footer>
     </section>
+
 
 
 }
