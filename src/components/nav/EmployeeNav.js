@@ -10,9 +10,9 @@ export const EmployeeNav = () => {
             <div className="navbar__item active">
                 <Link className="navbar__link" to="/tickets">Booking</Link>
             </div>
-            <div className="navbar__item active">
+            {/* <div className="navbar__item active">
                 <Link className="navbar__link" to="/employees">Employees</Link>
-            </div>
+            </div> */}
             {/* <div className="navbar__item navbar__logout">
                 <Link className="navbar__link" to="/profile">About Me</Link>
             </div> */}

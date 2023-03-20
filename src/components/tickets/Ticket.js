@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 
 export const Ticket = ({ ticketObject, currentUser, employees, getAllTickets }) => {
 
+    const localMercuryUser = localStorage.getItem("mercury_user")
+    const mercuryUserObject = JSON.parse(localMercuryUser)
     let assignedEmployee = null
 
     if (ticketObject.employeeTickets.length > 0) {
@@ -39,7 +41,8 @@ export const Ticket = ({ ticketObject, currentUser, employees, getAllTickets }) 
         const copy = {
             userId: ticketObject.userId,
             description: ticketObject.description,
-
+            time: ticketObject.time,
+            date: ticketObject.date,
             dateCompleted: new Date()
         }
 
@@ -57,24 +60,25 @@ export const Ticket = ({ ticketObject, currentUser, employees, getAllTickets }) 
 
     const buttonOrNoButton = () => {
         if (currentUser.staff) {
-            return <button
-                onClick={() => {
-                    fetch(`http://localhost:8088/employeeTickets`, {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify({
-                            employeeId: userEmployee.id,
-                            serviceTicketId: ticketObject.id
-                        })
+            return (
+
+                fetch(`http://localhost:8088/employeeTickets`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        employeeId: ticketObject.id,
+                        serviceTicketId: ticketObject.id
                     })
-                        .then(response => response.json())
-                        .then(() => {
-                            getAllTickets()
-                        })
-                }}
-            >Claim</button>
+                })
+                    .then(response => response.json())
+                    .then(() => {
+                        getAllTickets()
+                    })
+
+            )
+
         }
     }
 
@@ -87,14 +91,20 @@ export const Ticket = ({ ticketObject, currentUser, employees, getAllTickets }) 
             }
         </header>
         <section>{ticketObject.description}</section>
+        <section>{ticketObject.date}</section>
+        <section>{ticketObject.time}</section>
+
 
         <footer>
-            {
+            {/* {
                 ticketObject.employeeTickets.length
                     ? `Currently being worked on ${assignedEmployee !== null ? assignedEmployee?.user?.fullName : ""}`
                     : buttonOrNoButton()
 
             }
+            // {
+            //     canClose()
+            // } */}
             {
                 canClose()
             }

@@ -19,8 +19,10 @@
      */
 body {
 
-  background-image: url('file:///Users/nelsonlumpkin/Downloads/zodiac-5593791%20(2).svg');
+  background-image: url('file:///Users/nelsonlumpkin/Downloads/Untitled%20(1).svg');
   background-repeat: no-repeat;
+  filter: brightness(50%);
+  filter: contrast(120%);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -32,6 +34,50 @@ body {
   height: 100vh;
 
 }
+
+.astrology__img, .tarot__img, .iChing__img, .nelson__img {
+
+    display: flex;
+  flex-wrap: wrap;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: black solid;
+  border-radius: 120px;
+  background-color: #EDEDB0;
+
+}
+
+.nelson__img {
+  border-radius: 25px;
+}
+
+div.nelson__img {
+  background-color: black;
+  border-radius: 100px;
+  
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+
+}
+div.about__info{
+  
+  background: black;
+  border-radius: 100px;
+  padding: 25px;
+ 
+}
+p.about {
+color: white;
+font-family: 'Roboto Serif', serif;
+justify-content: center;
+display: flex;
+
+
+}
+
 
 
 h1,
@@ -110,4 +156,33 @@ label {
   padding: 0px 6px;
   box-shadow: rgb(158, 110, 222) 1px 5px 15px 5px;
   text-shadow: 20px 20px 20px 20px rgba(46, 0, 252, 0.971);
+}
+
+button {
+  background-color: #EDEDB0;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  padding: 15px;
+  box-shadow: rgba(46, 0, 252, 0.971) 1px 5px 15px 5px;
+  text-shadow: 20px 20px 20px 20px rgba(46, 0, 252, 0.971);
+  
+}
+input {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  height: 25px;
+  
+}
+div.divBox{
+  /* display: flex;
+  flex-wrap: wrap;
+ 
+  display: flex; */
+  align-items: center;
+  justify-content: center;
+  border: black solid;
+  border-radius: 120px;
+  background-color: #000000;
 }

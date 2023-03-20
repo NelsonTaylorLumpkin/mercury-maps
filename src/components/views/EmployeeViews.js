@@ -11,7 +11,7 @@ export const EmployeeViews = () => {
             <Route path="/" element={
                 <>
                     <h1>MERCURY MAPS</h1>
-                    <h3>YOUR FRIENDLY NEIGHBORHOOD FORTUNE-TELLER</h3>
+                    {/* <h3>YOUR FRIENDLY NEIGHBORHOOD FORTUNE-TELLER</h3> */}
 
                     <Outlet />
                 </>
