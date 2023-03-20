@@ -5,13 +5,14 @@ import { ClientList } from "../clients/ClientList"
 import { ClientDetails } from "../clients/ClientDetails"
 import { TicketEdit } from "../tickets/TicketEdit"
 import { AboutMe } from "../about/About"
+import { Services } from "../services/Services"
 export const ClientViews = () => {
 	return (
         <Routes>
             <Route path="/" element={
                 <>
                     <h1>MERCURY MAPS</h1>
-                    <h3>YOUR FRIENDLY NEIGHBORHOOD FORTUNE TELLER</h3>
+                    {/* <h3>YOUR FRIENDLY NEIGHBORHOOD FORTUNE TELLER</h3> */}
                     
                     <Outlet />
                 </>
@@ -23,6 +24,7 @@ export const ClientViews = () => {
                 <Route path="clients" element={ <ClientList /> } />
                 <Route path="clients/:clientId" element={ <ClientDetails/> } />
                 <Route path="about" element={ <AboutMe/> } />
+                <Route path="services" element={ <Services/> } />
             </Route>
         </Routes>
     )
